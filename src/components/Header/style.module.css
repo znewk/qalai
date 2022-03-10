@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "Rubik Regular";
+    src: url("../../../public/fonts/Rubik/Rubik-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Medium";
+    src: url("../../../public/fonts/Rubik/Rubik-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../../../public/fonts/Rubik/Rubik-Bold.ttf") format("truetype");
+}
+.header{
+    width: 100%;
+    padding: 10px 5%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    background: white;
+}
+.desktopHeader{
+    width: 100% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-family: "Rubik Bold";
+    color: black;
+    font-size: 24px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.logo:hover{
+    cursor: pointer;
+    color: #085df2;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menuItem{
+    text-decoration: none;
+    color: black;
+    font-family: "Rubik Medium";
+    transition: 0.3s;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.menuItem:hover{
+    color: #085df2;
+}
+.picked{
+    color: #085df2;
+}
+.menuBtn{
+    display: none;
+}
+.line{
+    height: 4px;
+    width: 32px;
+    background: black;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.menuBtn:hover .line{
+    background: #085df2;
+}
+.mobileMenu{
+    height: 0;
+    overflow: hidden;
+}
+.hide{
+    height: 0;
+    overflow: hidden;
+}
+@media screen and (max-width: 761px){
+    .menu{
+        display: none;
+    }
+    .menuBtn{
+        display: block;
+    }
+    .mobileMenu{
+        overflow: hidden;
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 76px;
+        transition: 0.3s;
+    }
+    .menuItem{
+        margin: 0;
+    }
+}

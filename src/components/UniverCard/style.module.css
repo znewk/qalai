@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "Rubik Regular";
+    src: url("../../../public/fonts/Rubik/Rubik-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Medium";
+    src: url("../../../public/fonts/Rubik/Rubik-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../../../public/fonts/Rubik/Rubik-Bold.ttf") format("truetype");
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.img{
+    width: 30%;
+    border-radius: 10px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+.container:hover .onHover{
+    opacity: 100;
+}
+.onHover{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.30);
+    opacity: 0;
+    transition: 0.5s;
+}
+.info{
+    width: 70%;
+    padding-left: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.title{
+    font-size: 24px;
+    font-family: "Rubik Bold";
+}
+.desc{
+    font-family: "Rubik Regular";
+    margin-top: 15px;
+}
+.top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.foot{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.medium{
+    font-family: "Rubik Medium";
+}
+.link{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: none;
+    border: 1px solid white;
+    font-family: "Rubik Regular";
+    transition: 0.3s;
+}
+.link:hover{
+    background: none;
+    border: 1px solid white;
+    background: #085df2;
+    border: 1px solid #085df2;
+}
+.geo{
+    color: #818181;
+    font-family: "Rubik Regular";
+    font-size: 14px;
+}
+.geoImg{
+    height: 12px;
+    width: 12px;
+    margin-right: 3px;
+}
+@media screen and (max-width: 761px){
+    .container{
+        flex-direction: column;
+    }
+    .img{
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+        padding: 0;
+        margin-top: 10px;
+    }
+    .foot{
+        margin-top: 10px;
+        justify-content: flex-end;
+    }
+}

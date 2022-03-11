@@ -17,6 +17,7 @@
     position: fixed;
     top: 0;
     background: white;
+    z-index: 10;
 }
 .desktopHeader{
     width: 100% ;

@@ -24,3 +24,22 @@
     flex-wrap: wrap;
     margin-top: 30px;
 }
+.loading{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Rubik Medium";
+}
+
+.flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.link{
+    color: black;
+    font-family: "Rubik Regular";
+}

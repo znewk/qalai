@@ -36,8 +36,8 @@ const Index = () => {
             <Header main={true}/>
 
             <IntroBlock/>
-            <WhatDoYouNeed/>
             <TopUniversitiesBlock universities={universities} unversitiesLoading={unversitiesLoading}/>
+            <WhatDoYouNeed/>
 
             <Footer/>
 

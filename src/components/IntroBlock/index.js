@@ -20,17 +20,17 @@ const IntroBlock = () => {
             <div className={classnames(showLeftSide ? styles.show : styles.hide ,styles.leftSide)}>
                 <div>
                     <span className={classnames(styles.title)}>
-                        <span style={{color: '#085df2'}}>Как</span> поступить на
-                        <span style={{color: '#085df2'}}> высшее</span> за
-                        <span style={{color: '#085df2'}}> границу</span>?
+                        <span style={{color: '#085df2'}}>Не можешь</span> определиться какой
+                        <span style={{color: '#085df2'}}> ВУЗ</span>
+                        <span style={{color: '#085df2'}}> выбрать</span>?
                     </span>
 
                     <span className={classnames(styles.subtitle)}>
-                        Qalai.kz - расскажем и покажем о том как поступить в Европу.  <br/>
-                        На нашей платформе собрана вся информация о зарубежных универститетах. <br/>
+                        Qalai.kz - поможем сделать правильный выбор.  <br/>
+                        На нашей платформе собрана вся информация об универститетах Европы и СНГ. <br/>
                         Предоставляем услуги полного сопровождения на поступление.
                     </span> <br/> <br/>
-                    <a href="/services" className={styles.btn}>Перейти к услугам</a>
+                    <a href="/universities" className={styles.btn}>Университеты</a>
                 </div>
             </div>
             <div className={classnames(showRightSide ? styles.show : styles.hide ,styles.rightSide)}>

@@ -1,7 +1,7 @@
 import styles from './style.module.css'
 import {useState} from "react";
 
-const FilterBlock = ({cities, universities, filterHandler, ...props}) => {
+const FilterBlock = ({cities, universities, filterHandler, specializations, ...props}) => {
 
     const [countryId, setCountryId] = useState(0)
     const [specializationId, setSpecializationId] = useState(0)
@@ -20,9 +20,14 @@ const FilterBlock = ({cities, universities, filterHandler, ...props}) => {
                     </select>
                     <select className={styles.select} onChange={e => setSpecializationId(e.target.value)}>
                         <option value={0}>Специальность</option>
+                        {
+                            specializations.map(specialization => <option value={specialization.id}>{specialization.name}</option>)
+                        }
                     </select>
                     <select className={styles.select} onChange={e => setLanguageId(e.target.value)}>
                         <option value={0}>Язык обучения</option>
+                        <option value={1}>Английский язык</option>
+                        <option value={2}>Русский язык</option>
                     </select>
                     <select className={styles.select} onChange={e => setUniversityId(e.target.value)}>
                         <option value={0}>Университет</option>
@@ -33,11 +38,7 @@ const FilterBlock = ({cities, universities, filterHandler, ...props}) => {
                 </div>
                 <div className={styles.btnBody}>
                     <button className={styles.btn} onClick={()=> {
-                        filterHandler(countryId, universityId)
-                        setCountryId(0)
-                        setLanguageId(0)
-                        setSpecializationId(0)
-                        setUniversityId(0)
+                        filterHandler(countryId, specializationId, languageId, universityId)
                     }}>Найти университет</button>
                 </div>
             </div>

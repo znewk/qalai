@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Rubik Regular";
+    src: url("../../public/fonts/Rubik/Rubik-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Medium";
+    src: url("../../public/fonts/Rubik/Rubik-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../../public/fonts/Rubik/Rubik-Bold.ttf") format("truetype");
+}
+
+.introBlock{
+    width: 90%;
+    box-sizing: border-box;
+    padding: 2% 5%;
+    font-family: "Rubik Regular";
+    font-size: 18px;
+}
+.introDesc{
+    font-family: "Rubik Regular";
+    font-size: 18px;
+}

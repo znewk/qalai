@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Rubik Regular";
+    src: url("../../../public/fonts/Rubik/Rubik-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Medium";
+    src: url("../../../public/fonts/Rubik/Rubik-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../../../public/fonts/Rubik/Rubik-Bold.ttf") format("truetype");
+}
+
+.container{
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+.title{
+    font-family: "Rubik Bold";
+    font-size: 32px;
+}
+.listItem{
+    width: 100%;
+}
+.subtitle{
+    font-family: "Rubik Regular";
+    font-size: 18px;
+}

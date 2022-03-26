@@ -11,6 +11,10 @@ class API {
         const countries = await axios.get(`${serverDomain}/getCountries/`)
         return(countries.data)
     }
+    getSpecializations = async () => {
+        const specializations = await axios.get(`${serverDomain}/getSpecializations/`)
+        return(specializations.data)
+    }
     getUniversityById = async (id) => {
         const university = await axios.post(`${serverDomain}/getUniversityById/`, {id: id})
         console.log('getUniversityById api result:', university)
@@ -21,11 +25,7 @@ class API {
         console.log('getUniversityByCountryId api result:', universities.data)
         return(universities.data)
     }
-    getFilteredUniversities = async (countryId, universityId) => {
-        const data = {
-            country_id: countryId,
-            university_id: universityId
-        }
+    getFilteredUniversities = async (data) => {
         const universities = await axios.post(`${serverDomain}/getFilteredUniversities/`, data)
         console.log('getFilteredUniversities api result:', universities.data)
         return(universities.data)

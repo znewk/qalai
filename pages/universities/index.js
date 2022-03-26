@@ -21,6 +21,9 @@ const Universities = () => {
     const [cities, setCities] = useState([])
     const [citiesLoading, setCitiesLoading] = useState(true)
 
+    const [specializations, setSpecializations] = useState([])
+    const [specializationsLoading, setSpecializationsLoading] = useState(true)
+
     const loadUniversitiesForFilter = async () => {
         const universities = await api.getUniversities()
         setUniversitiesForFilter(universities)
@@ -31,19 +34,31 @@ const Universities = () => {
         setUniversities(universities)
         setUniversitiesLoading(false)
     }
+    const loadSpecializations = async () => {
+        const specializations = await api.getSpecializations()
+        setSpecializations(specializations)
+        setSpecializationsLoading(false)
+    }
     const loadCountries = async () => {
         const cities = await api.getCountries()
         setCities(cities)
         setCitiesLoading(false)
     }
 
-    const filterHandler = async (coutnryId, universityId) => {
+    const filterHandler = async (coutnryId, specializationId, languageId, universityId) => {
         setUniversitiesLoading(true)
-        console.log('countryID, universityID', coutnryId, universityId)
-        if(coutnryId==0 && universityId==0) {
-            router.reload()
+        console.log('ids', coutnryId, specializationId, languageId, universityId)
+
+        if(coutnryId === 0 && specializationId === 0 & languageId === 0 && universityId === 0) {
+            loadUniversities()
         } else {
-            const universities = await api.getFilteredUniversities(coutnryId, universityId)
+            const data = {
+                country_id: coutnryId,
+                specialization_id: specializationId,
+                language_id: languageId,
+                university_id: universityId
+            }
+            const universities = await api.getFilteredUniversities(data)
             setUniversities(universities)
             setUniversitiesLoading(false)
         }
@@ -53,6 +68,7 @@ const Universities = () => {
         loadUniversitiesForFilter()
         loadUniversities()
         loadCountries()
+        loadSpecializations()
     }, [])
     return (
         <div>
@@ -62,7 +78,7 @@ const Universities = () => {
             </Head>
 
             <Header universities={true}/>
-            <FilterBlock universities={universitiesForFilter} cities={cities} filterHandler={filterHandler}/>
+            <FilterBlock universities={universitiesForFilter} specializations={specializations} cities={cities} filterHandler={filterHandler}/>
 
             <div className={styles.universities}>
                 <TitleBlock img={'/bookmark-fav-dynamic-color.png'} title={'Университеты'}/>

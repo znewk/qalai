@@ -12,17 +12,18 @@
 }
 
 .container{
-    width: 100%;
+    width: 48%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin-bottom: 30px;
 }
 .img{
-    width: 30%;
+    width: 100%;
     border-radius: 10px;
     height: 250px;
     background-size: cover;
     background-position: center;
+    margin-bottom: 15px;
 }
 .container:hover .onHover{
     opacity: 100;
@@ -39,8 +40,7 @@
     transition: 0.5s;
 }
 .info{
-    width: 70%;
-    padding-left: 15px;
+    width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -49,6 +49,8 @@
 .title{
     font-size: 24px;
     font-family: "Rubik Bold";
+    color: black;
+    text-decoration: none;
 }
 .desc{
     font-family: "Rubik Regular";
@@ -62,7 +64,8 @@
 .foot{
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    margin-top: 10px;
 }
 .medium{
     font-family: "Rubik Medium";
@@ -96,6 +99,7 @@
 @media screen and (max-width: 761px){
     .container{
         flex-direction: column;
+        width: 100%;
     }
     .img{
         width: 100%;

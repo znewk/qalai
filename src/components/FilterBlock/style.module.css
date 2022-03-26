@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Rubik Regular";
+    src: url("../../../public/fonts/Rubik/Rubik-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Medium";
+    src: url("../../../public/fonts/Rubik/Rubik-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../../../public/fonts/Rubik/Rubik-Bold.ttf") format("truetype");
+}
+
+.container{
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+}
+.filters{
+    width: 65%;
+    background: #5991ff;
+    padding: 50px;
+    border-radius: 30px;
+}
+.selects{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.select{
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 200px;
+    border: none;
+    font-family: "Rubik Medium";
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.select:focus{
+    outline: none;
+}
+.btnBody{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.btn{
+    padding: 10px 15px;
+    background: #327cff;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Rubik Medium";
+    border: none;
+    cursor: pointer;
+}
+.btn:active{
+    outline: none;
+}
+@media screen and (max-width: 761px) {
+    .filters{
+        padding: 30px;
+        width: 100%;
+    }
+    .select{
+        width: 100%;
+    }
+}

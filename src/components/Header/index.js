@@ -11,7 +11,7 @@ const Header = (props) => {
             <div className={styles.desktopHeader}>
                 <a href="/" className={styles.logo}>Qalai?</a>
                 <div className={styles.menu}>
-                    <a href="/universities" className={styles.menuItem}>Университеты</a>
+                    <a href="/universities" className={classnames(styles.menuItem, props.universities && styles.picked)}>Университеты</a>
                     <a href="/services" className={styles.menuItem}>Услуги</a>
                     <a href="/" className={classnames(styles.menuItem, props.main && styles.picked)}>Главная</a>
                 </div>

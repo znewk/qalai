@@ -13,11 +13,12 @@ const UniverCard = (props) => {
             </div>
             <div className={styles.info}>
                 <div className={styles.top}>
-                    <span className={styles.title}>{props.univer.title}
+                    <a href={`/university/${encodeURIComponent(props.univer.url)}?id=${encodeURIComponent(props.univer.id)}`} target="_blank" className={styles.title}>
+                        {props.univer.title}
                         {
                             props.this && <span className={styles.desc} style={{color: '#818181', fontSize: 17}}> ВЫ ЗДЕСЬ</span>
                         }
-                    </span>
+                    </a>
 
 
                     <span className={styles.desc}>

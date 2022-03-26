@@ -6,6 +6,7 @@ import API from "../../src/api";
 import TitleBlock from "../../src/components/TitleBlock";
 import UniverCard from "../../src/components/UniverCard";
 import Footer from "../../src/components/Footer";
+import { Map, Placemark, YMaps } from 'react-yandex-maps';
 
 const University = (props) => {
     const [university, setUniversity] = useState(props.university)
@@ -54,6 +55,17 @@ const University = (props) => {
                 <span className={styles.desc}>{university.study_schedule}</span>
             </div>
 
+            <div style={{padding: '0 5%', boxSizing: 'border-box', marginTop: '30px'}}>
+                <TitleBlock img={'/fire-dynamic-color.png'} title={'Местонахождение'}/>
+            </div>
+            <div style={{margin: '20px 0'}}>
+                <YMaps className={styles.ymaps}>
+                    <Map width={'100%'} height={'30vh'} defaultState={{ center: [university.latitude, university.longitude], zoom: 16 }} >
+                        <Placemark geometry={[university.latitude, university.longitude]} />
+                    </Map>
+                </YMaps>
+            </div>
+
             {
                 props.universitiesFromThisCountry.length!=0 && (
                     <div className={styles.universitiesWrapper}>
@@ -69,6 +81,14 @@ const University = (props) => {
                                 })
                             }
                         </div>
+
+                        {
+                            props.universitiesFromThisCountry.length!=0 && (
+                                <div className={styles.flex}>
+                                    <a className={styles.link} href="/universities">Все университеты</a>
+                                </div>
+                            )
+                        }
                     </div>
                 )
             }

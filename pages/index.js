@@ -20,7 +20,6 @@ const Index = () => {
         const universities = await api.getUniversities()
         setUniversities(universities)
         setUniversitiesLoading(false)
-        console.log(universities)
     }
 
     useEffect(async ()=>{

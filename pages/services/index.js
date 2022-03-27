@@ -4,8 +4,26 @@ import Footer from "../../src/components/Footer";
 import Head from "next/head";
 import TitleBlock from "../../src/components/TitleBlock";
 import ServicesDescList from "../../src/components/ServicesDescList";
+import TopUniversitiesBlock from "../../src/components/TopUniversitiesBlock";
+import {useEffect, useState} from "react";
+import API from "../../src/api";
 
 const Services = () => {
+    const api = new API()
+
+    const [universities, setUniversities] = useState([])
+    const [unversitiesLoading, setUniversitiesLoading] = useState(true)
+
+    const loadUniversities = async () => {
+        const universities = await api.getUniversities()
+        setUniversities(universities)
+        setUniversitiesLoading(false)
+    }
+
+    useEffect(async ()=>{
+        loadUniversities()
+    }, [])
+
     return (
         <div>
             <Header services={true}/>
@@ -29,6 +47,8 @@ const Services = () => {
             </div>
 
             <ServicesDescList/>
+
+            <TopUniversitiesBlock universities={universities} unversitiesLoading={unversitiesLoading}/>
 
             <Footer/>
         </div>

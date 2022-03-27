@@ -7,9 +7,12 @@ import TitleBlock from "../../src/components/TitleBlock";
 import UniverCard from "../../src/components/UniverCard";
 import Footer from "../../src/components/Footer";
 import { Map, Placemark, YMaps } from 'react-yandex-maps';
+import SendApplicationBlock from "../../src/components/SendApplicationBlock";
 
 const University = (props) => {
     const [university, setUniversity] = useState(props.university)
+
+    const api = new API()
 
     useEffect(()=>{
         console.log(props)
@@ -48,6 +51,9 @@ const University = (props) => {
                 <span className={styles.infoTitle}>Расходы на проживание</span>
                 <span className={styles.desc}>{university.living_expenses}</span>
 
+                <span className={styles.infoTitle}>За рубежом:</span>
+                <span className={styles.desc}>{university.is_foreign ? 'Да' : 'Нет'}</span>
+
                 <span className={styles.infoTitle}>Поступление</span>
                 <span className={styles.desc}>{university.entrance}</span>
 
@@ -65,6 +71,8 @@ const University = (props) => {
                     </Map>
                 </YMaps>
             </div>
+
+            <SendApplicationBlock university={university}/>
 
             {
                 props.universitiesFromThisCountry.length!=0 && (

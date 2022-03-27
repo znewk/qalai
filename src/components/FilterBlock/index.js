@@ -38,7 +38,7 @@ const FilterBlock = ({cities, universities, filterHandler, specializations, ...p
                 </div>
                 <div className={styles.btnBody}>
                     <button className={styles.btn} onClick={()=> {
-                        filterHandler(countryId, specializationId, languageId, universityId)
+                        filterHandler(Number(countryId), Number(specializationId), Number(languageId), Number(universityId))
                     }}>Найти университет</button>
                 </div>
             </div>

@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Rubik Regular";
+    src: url("../../../public/fonts/Rubik/Rubik-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Medium";
+    src: url("../../../public/fonts/Rubik/Rubik-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../../../public/fonts/Rubik/Rubik-Bold.ttf") format("truetype");
+}
+
+.container{
+    margin: 50px 0;
+    padding: 100px 5%;
+    box-sizing: border-box;
+    background: #3d45b9;
+}
+
+.title{
+    color: white;
+    font-family: "Rubik Bold";
+    font-size: 48px;
+}
+.subtitle{
+    color: white;
+    font-size: 18px;
+    font-family: "Rubik Regular";
+}
+.checkMark{
+    margin-left: 10px;
+    height: 36px;
+    width: 36px;
+}
+.link{
+    color: white;
+    text-decoration: underline;
+}
+.link:hover{
+    color: white;
+}
+.input{
+    font-family: "Rubik Regular";
+    border: none;
+    color: black;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.input:focus{
+    outline: none;
+}
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.form{
+    margin-top: 15px;
+    width: 100%;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.btn{
+    background: #085df2;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Rubik Regular";
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn:active{
+    outline: none;
+}

@@ -20,6 +20,14 @@ class API {
         console.log('getUniversityById api result:', university)
         return(university.data[0])
     }
+    createApplication = async (name, phone) => {
+        const data = {
+            name: name,
+            phone: phone
+        }
+
+        await axios.post(`${serverDomain}/createNewApplication/`, data)
+    }
     getUniversityByCountryId = async (id) => {
         const universities = await axios.post(`${serverDomain}/getUniversityByCountryId/`, {id: id})
         console.log('getUniversityByCountryId api result:', universities.data)

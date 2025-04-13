@@ -43,7 +43,7 @@ const University = (props) => {
                 <span className={styles.desc} style={{fontFamily: 'Rubik Medium', fontSize: 22}}>{university.description}</span> <br/> <br/>
 
                 <span className={styles.infoTitle}>Престижные специальности</span>
-                <span className={styles.desc}>{university.specializations}</span>
+                <span className={styles.desc}>{university.specializations.map(spec => spec.name).join(', ')}</span>
 
                 <span className={styles.infoTitle}>Стоимость обучения</span>
                 <span className={styles.desc}>{university.tuition_fees}</span>

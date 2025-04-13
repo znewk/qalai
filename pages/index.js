@@ -22,7 +22,7 @@ const Index = () => {
         setUniversitiesLoading(false)
     }
 
-    useEffect(async ()=>{
+    useEffect(()=>{
         loadUniversities()
     }, [])
 

@@ -16,7 +16,7 @@ const TopUniversitiesBlock = ({universities, unversitiesLoading, ...props}) => {
                 ) : (
                     <div className={styles.wrapper}>
                         {
-                            universities.length!=0 ? universities.splice(0, 4).map(univer => <UniverCard univer={univer}/>) : (
+                            universities?.length!=0 ? universities?.splice(0, 4).map(univer => <UniverCard univer={univer}/>) : (
                                 <div className={styles.loading}>
                                     <span>Ошибка</span>
                                 </div>
@@ -27,7 +27,7 @@ const TopUniversitiesBlock = ({universities, unversitiesLoading, ...props}) => {
             }
 
             {
-                universities.length!=0 && (
+                universities?.length!=0 && (
                     <div className={styles.flex}>
                         <a className={styles.link} href="/universities">Все университеты</a>
                     </div>

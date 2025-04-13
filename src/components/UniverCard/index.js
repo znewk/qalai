@@ -27,7 +27,7 @@ const UniverCard = (props) => {
                     </span>
                     <span className={styles.desc}>
                         <span className={styles.medium}>Престижные специальности: </span>
-                        {props.univer.specializations}
+                        {props.univer?.specializations?.map(spec => spec.name).join(', ')}
                     </span>
                 </div>
                 <div className={styles.foot}>
